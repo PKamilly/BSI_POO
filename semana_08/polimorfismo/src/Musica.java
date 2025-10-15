@@ -11,6 +11,7 @@ public class Musica extends ConteudoDeAudio {
 
     public Musica() {}
 
+    // Getters
     public String getAlbum(){
         return album;
     }
@@ -18,8 +19,14 @@ public class Musica extends ConteudoDeAudio {
         return genero;
     }
 
+    // Setters
+    public void setAlbum(String album) { this.album = album; }
+    public void setGenero(String genero) { this.genero = genero; }
+
+    // Metodo polimórfico que esta sendo sobrescrito da classe pai
     @Override
     public void exibirDetalhes(){
+        super.exibirDetalhes();
         System.out.println("Álbum: "+ this.album);
         System.out.println("Gênero: "+ this.genero);
     }

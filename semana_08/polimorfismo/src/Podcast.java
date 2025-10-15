@@ -10,6 +10,7 @@ public class Podcast extends ConteudoDeAudio {
     }
     public Podcast(){}
 
+    // Getters
     public String getNomeDoPrograma(){
         return nomeDoPrograma;
     }
@@ -17,8 +18,14 @@ public class Podcast extends ConteudoDeAudio {
         return numeroDoEpisodio;
     }
 
+    // Setters
+    public void setNomeDoPrograma(String nomeDoPrograma) { this.nomeDoPrograma = nomeDoPrograma; }
+    public void setNumeroDoEpisodio(int numeroDoEpisodio) { this.numeroDoEpisodio = numeroDoEpisodio; }
+
+    // Metodo polimórfico que esta sendo sobrescrito da classe pai
     @Override
     public void exibirDetalhes(){
+        super.exibirDetalhes();
         System.out.println("Nome do Programa: "+ this.nomeDoPrograma);
         System.out.println("Número do Episódio: "+ this.numeroDoEpisodio);
     }
