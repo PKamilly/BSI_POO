@@ -8,7 +8,7 @@ public class Main{
 
         int opcao = 0;
         do{
-            System.out.println("\n--- Menu Biblioteca de Aúdio feita por Willian e Kamilly ---");
+            System.out.println("--- Menu Biblioteca de Aúdio feita por Willian e Kamilly ---");
             System.out.println("1. Cadastrar Música");
             System.out.println("2. Cadastrar Podcast");
             System.out.println("3. Cadastrar AudioBook");
@@ -111,33 +111,32 @@ public class Main{
                         System.out.println("A Biblioteca está vazia!");
                     }
                     else {
-                        for (ConteudoDeAudio CDA : biblioteca){
-                            int i=0;
-                            if (CDA instanceof Musica){
-                                Musica m = (Musica) CDA;
+                        int i = 0;
+                        for (ConteudoDeAudio cda : biblioteca){
+//                            int i=0;
+                            if (cda instanceof Musica){
                                 System.out.println("==== MUSICA ====");
                                 System.out.println((i + 1) + ".");
-                                m.exibirDetalhes();
+                                cda.exibirDetalhes();
                                 System.out.println("================");
                                 System.out.println(); // Espaçamento
 
-                            } else if (CDA instanceof Podcast){
-                                Podcast p = (Podcast) CDA;
+                            } else if (cda instanceof Podcast){
                                 System.out.println("==== PODCAST ====");
                                 System.out.println((i + 1) + ".");
-                                p.exibirDetalhes();
+                                cda.exibirDetalhes();
                                 System.out.println("=================");
                                 System.out.println(); // Espaçamento
 
-                            } else if (CDA instanceof AudioBook){
-                                AudioBook ab = (AudioBook) CDA;
+                            } else if (cda instanceof AudioBook){
                                 System.out.println("==== AUDIOBOOK ====");
                                 System.out.println((i + 1) + ".");
-                                ab.exibirDetalhes();
+                                cda.exibirDetalhes();
                                 System.out.println("===================");
                                 System.out.println(); // Espaçamento
 
                             }
+                            i++;
                         }
                     }
                     break;
